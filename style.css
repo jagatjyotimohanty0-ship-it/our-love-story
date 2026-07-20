@@ -1,1 +1,162 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== MAIN CONTAINER ===== */
+section {
+    min-height: 100vh;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== WELCOME SCREEN ===== */
+.welcome {
+    background: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.9)
+    );
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 60px;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.welcome p {
+    font-size: 22px;
+    color: #ddd;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: #e50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #ff1e2d;
+}
+
+
+/* ===== LOVE LETTER ===== */
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+}
+
+.card h2 {
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+
+/* ===== GALLERY ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    width:100%;
+}
+
+.gallery img {
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.5s;
+}
+
+.gallery img:hover {
+    transform:scale(1.05);
+}
+
+
+/* ===== MUSIC PLAYER ===== */
+.music-box {
+    text-align:center;
+}
+
+audio {
+    margin-top:20px;
+}
+
+
+/* ===== COUNTER ===== */
+.counter {
+    text-align:center;
+}
+
+.counter h2 {
+    font-size:45px;
+    color:#ff4d6d;
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+    text-align:center;
+    padding:30px;
+    background:#000;
+    color:#aaa;
+}
+
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+
+    .welcome h1 {
+        font-size:40px;
+    }
+
+    .welcome p {
+        font-size:18px;
+    }
+
+    section {
+        padding:40px 5%;
+    }
+}
